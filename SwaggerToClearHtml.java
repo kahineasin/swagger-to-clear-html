@@ -1,5 +1,6 @@
 package org.sg.helper;
 
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
@@ -17,7 +18,7 @@ import java.util.Map;
  * by BENJAMIN
  */
 public class SwaggerToClearHtml {
-    public static void generateHtml(String swaggerJson) throws Exception {
+    public static void generateHtml(String swaggerJson,String outFile) throws Exception {
         // 1. 获取本地 Swagger JSON
 //        TestRestTemplate restTemplate = new TestRestTemplate();
 //        ResponseEntity<String> response = restTemplate.getForEntity(
@@ -36,7 +37,7 @@ public class SwaggerToClearHtml {
         String html = buildHtmlFromJson(swaggerJson);
 
         // 4. 写入文件
-        File output = new File("docs/index.html");
+        File output = new File(outFile);
         output.getParentFile().mkdirs();
         try (FileWriter writer = new FileWriter(output)) {
             writer.write(html);

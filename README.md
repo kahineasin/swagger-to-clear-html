@@ -63,7 +63,7 @@ Open docs/api.html in any browser. That's it — no server needed.
 
 🖼️ Example Output
 
-See the screenshots folder or the api.html example file included in the repo.
+See the screenshots folder or the [api.html](api.html) example file included in the repo.
 
 🤝 Contributing
 
